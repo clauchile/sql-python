@@ -93,12 +93,12 @@ las características especiales y el género (categoría).*/
 
 SELECT f.film_id,f.title, f.description, f.description, f.release_year,f.rating, f.rental_rate, f.special_features -- fc.category_id
 FROM actor a 
-JOIN film_actor fa on fa.actor_id = a.actor_id
-JOIN film f on f.film_id = fa.film_id
-JOIN film_category fc on f.film_id = fc.film_id
-JOIN category c on c.category_id = fc.category_id
-where c.name = 'Drama' and f.rental_rate= 2.99
-group by f.film_id;
+JOIN film_actor fa ON fa.actor_id = a.actor_id
+JOIN film f ON f.film_id = fa.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON c.category_id = fc.category_id
+WHERE c.name = 'Drama' AND f.rental_rate= 2.99
+GROUP BY f.film_id;
 
 /*8. ¿Qué consulta harías para obtener todas las películas de acción 
 a las que se une SANDRA KILMER? Su consulta debe devolver el título
@@ -113,4 +113,4 @@ JOIN film_actor fa on fa.actor_id = a.actor_id
 JOIN film f on f.film_id = fa.film_id
 JOIN film_category fc on f.film_id = fc.film_id
 JOIN category c on c.category_id = fc.category_id
-where a.first_name = 'SANDRA' and a.last_name = 'KILMER' and c.name = 'Action'
+WHERE a.first_name = 'SANDRA' AND a.last_name = 'KILMER' AND c.name = 'Action'
